@@ -9,16 +9,11 @@
 :NeoBundleInstall
 ```
 
-2. qfixhownのインストール
-```
-https://sites.google.com/site/fudist/Home/qfixhowm/installからインストールして.vim/に配置
-~/GoogleDrive/qfixfolderディレクトリを作成する
-```
-
-3. シンボリックリンクで繋げる
+2. シンボリックリンクで繋げる
 ```
 $ ln -s ~/setting/vimrc/_vimrc ~/.vimrc
 $ ln -s ~/setting/indent ~/.vim/indent
 $ ln -s ~/setting/indent ~/.vim/indent
+$ ln -s ~/setting/colors ~/.vim/colors
 ```
 
