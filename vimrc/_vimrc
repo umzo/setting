@@ -29,8 +29,10 @@ set hlsearch
 " 表示設定
 "----------------------------------------
 set encoding=utf-8
-set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
+set fileencodings=utf-8,iso-2022-jp,euc-jp,sjis
 set fileformats=unix,dos,mac
+
+set fenc=utf-8
 " エラーメッセージの表示時にビープを鳴らさない
 set noerrorbells
 " 対応する括弧やブレースを表示
@@ -167,6 +169,7 @@ NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/neocomplete.vim'
+NeoBundle 'jacoborus/tender.vim'
 
 call neobundle#end()
 
@@ -174,7 +177,7 @@ call neobundle#end()
 filetype plugin indent on
 
 "vim-airlineの設定"
-let g:airline_theme = 'luna'
+let g:airline_theme = 'tender'
 set laststatus=2
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
@@ -287,6 +290,10 @@ let g:NERDTreeNodeDelimiter = "\u00a0"
 autocmd Colorscheme * highlight FullWidthSpace ctermbg=white
 autocmd VimEnter * match FullWidthSpace /　/
 " カラースキームの設定
+if (has("termguicolors"))
+ set termguicolors
+endif
+
+" Theme
 syntax enable
-set background=dark
-colorscheme material-theme
+colorscheme tender
