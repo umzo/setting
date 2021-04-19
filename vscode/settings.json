@@ -1,0 +1,65 @@
+{
+    //----------------------------------------------------------
+    // vscode vimの設定
+    //----------------------------------------------------------
+    // systemのclipboardを使用します
+    "vim.useSystemClipboard": true,
+    // 検索結果のハイライト
+    "vim.hlsearch": true,
+    // 検索をするときに見やすいモッサりすることなければこのまま
+    "vim.easymotion": true,
+    // 検索を * or + に対応
+    "vim.visualstar": true,
+    "vim.useCtrlKeys": true,
+    // ignore case in search patterns.
+    "vim.ignorecase": true,
+    // show where a / search matches as you type it.
+    "vim.incsearch": true,
+    // enable the sneak plugin for vim.
+    // s + 文字列で文字列検 ;で次のeaに移動し、,で前のeaに移動
+    "vim.sneak": true,
+
+    "editor.fontFamily": "Roboto Mono for Powerline",
+    "editor.fontSize": 16,
+    "workbench.editor.enablePreview": false,
+    // 画面端で折り返し
+    "editor.wordWrap": "on",
+    // 拡張子とシンタックスハイライトの関連付け
+    "files.associations":
+    {
+        "*.tpl": "php"
+    },
+    "debug.console.fontSize": 14,
+    "editor.cursorBlinking": "solid",
+    "files.watcherExclude": {
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+        "**/.rvm/**":true,
+        "**/node_modules/**": true,
+        "**/Library/**":true,
+        "**/GoogleDrive/**":true,
+        "**/Dropbox/**":true,
+        "**/.cocoapods/**":true,
+        "**/Pictures/**":true,
+    },
+    "workbench.iconTheme": "vscode-icons",
+    "todohighlight.keywords": [
+        {
+            "text": "NOTE:",
+            "color": "black",
+            "backgroundColor": "#64ff64",
+            "overviewRulerColor": "grey"
+        },
+        {
+            "text": "DEBUG:",
+            "color": "#ff0000",
+            "backgroundColor": "yellow",
+            "overviewRulerColor": "grey"
+        }
+    ],
+    // "editor.fontSize": 11,
+    "window.zoomLevel": -1,
+    "workbench.startupEditor": "newUntitledFile",
+    "terminal.integrated.shell.osx": "/bin/zsh",
+    "vsicons.dontShowNewVersionMessage": true
+}

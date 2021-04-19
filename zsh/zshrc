@@ -1,0 +1,42 @@
+# zplug
+source ~/.zplug/init.zsh
+
+export LANG=ja_JP.UTF-8
+export LC_CTYPE=$LANG
+
+# 非同期処理できるようになる
+zplug "mafredri/zsh-async"
+# テーマ
+zplug "sindresorhus/pure"
+# 間違ったコマンドをハイライト
+zplug "zsh-users/zsh-syntax-highlighting", defer:2
+# 予測補完
+zplug "zsh-users/zsh-autosuggestions", defer:2
+zplug "zsh-users/zsh-completions", defer:2
+# Install plugins if there are plugins that have not been installed
+if ! zplug check --verbose; then
+  printf "Install? [y/N]: "
+  if read -q; then
+    echo; zplug install
+  fi
+fi
+
+# Then, source plugins and add commands to $PATH
+zplug load
+export GOENV_ROOT="$HOME/.goenv"
+export PATH="$GOENV_ROOT/bin:$PATH"
+eval "$(goenv init -)"
+export PATH="$GOPATH/bin:$PATH"
+
+export PATH=$HOME/.nodebrew/current/bin:$PATH
+
+# connecting VPN
+alias vc='networksetup -connectpppoeservice  "VPN (L2TP)"'
+alias vd='scutil --nc stop "VPN (L2TP)"'
+
+export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
+
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
